@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* general stuff */
+
+html {
+	font-family: Times New Roman;
+	background-color: black;
+}
+
+body {
+	font-size: 1em;
+	color: rgb(230,211,255);
+	background-image: url(#);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+main {
+	border: 2px solid rgb(23,17,49);
+	border-radius: 60px;
+	background-image: linear-gradient(0deg, rgb(9,10,59), rgb(11,7,31))
+}
+
+.centerEverything {
+	margin: 0 auto;
+}
+
+ul {
+	display: table;
+	border-collapse: collapse;
+	border: 2px solid rgb(230,211,255);
+	background-color: rgb(23,17,49);
+}
+
+li {
+	vertical-align: center;
+	text-align: center;
+	overflow-wrap: normal;
+}
+
+footer {
+	font-size: 1em;
+	border-top: 2px solid rgb(230,211,255);
+	color: rgb(230,211,255);
+	background-color: rgb(9,6,23);
+}
+
+/* mobeel stuff */
+
+@media screen and (max-width: 480px) {
+	nav {
+		display: flex;
+		width: max-content;
+		border-left: 0;
+		border-right: 0;
+	}
+
+	li {
+		display: table-column;
+	}
+}
