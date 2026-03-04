@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* general stuff */
+
+html {
+	font-family: Times New Roman;
+	background-color: black;
+}
+
+header {
+	font-size: 6.5vw;
+	text-shadow: 5px 0 rgb(23,17,49), -5px 0 rgb(23,17,49), 0 5px rgb(23,17,49), 0 -5px rgb(23,17,49);
+	text-align: center;
+}
+
+
+body {
+	font-size: 2em;
+	color: rgb(230,211,255);
+	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+	background-image: url(../images/space_bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#mainMain {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+img.windows {
+	height: 80%;
+	width: 80%;
+	border: 5px solid rgb(11,7,31);
+	align-self: center;
+	box-shadow: 0 0 5px rgb(11,7,31)
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 20px;
+	align-items: center;
+}
+
+main p {
+	border: 5px solid rgb(23,17,49);
+	border-radius: 60px;
+	background-image: linear-gradient(0deg, rgb(9,10,59), rgb(11,7,31));
+	text-align: center;
+	padding: 5px;
+	box-shadow: 0 0 5px rgb(23,17,49);
+}
+
+.centerEverything {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+nav ul {
+	list-style-type: none;
+	display: table;
+	border-collapse: collapse;
+	border: 5px solid rgb(230,211,255);
+	background-color: rgb(23,17,49);	
+	box-shadow: 0 0 5px rgb(230,211,255);
+}
+
+li {
+	font-size: 2em;
+	padding: 80px 10px;
+	vertical-align: center;
+	text-align: center;
+	overflow-wrap: normal;
+	border-top: 5px solid rgb(230,211,255);
+}
+
+li:nth-of-type(1) {
+	border-top: 0;
+}
+
+
+footer {
+	font-size: 1em;
+	border-top: 5px solid rgb(230,211,255);
+	color: rgb(230,211,255);
+	background-color: rgb(9,6,23);
+	padding: 20px 10% 80px;
+}
+
+/* link styles */
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-shadow: 0 0 5px rgb(230,211,255);
+}
+
+ul li:has(a:hover) {
+	background-color: rgb(9,10,59);
+}
+
+/* mobeel stuff */
+
+@media screen and (max-width: 480px) {
+	nav {
+		display: flex;
+		width: max-content;
+		border-left: 0;
+		border-right: 0;
+	}
+
+	li {
+		display: table-column;
+	}
+}
