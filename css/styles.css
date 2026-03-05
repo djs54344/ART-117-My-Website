@@ -30,8 +30,8 @@ body {
 }
 
 img.windows {
-	height: 80%;
-	width: 80%;
+	height: 70%;
+	width: 70%;
 	border: 5px solid rgb(11,7,31);
 	align-self: center;
 	box-shadow: 0 0 5px rgb(11,7,31)
@@ -79,11 +79,6 @@ ul li:has(a:hover) {
 @media screen and (min-width: 481px) {
 	header {
 		padding-bottom: 60px;
-	}
-
-	img.windows {
-		height: 70%;
-		width: 70%;
 	}
 
 	main {
@@ -135,7 +130,7 @@ ul li:has(a:hover) {
 @media screen and (max-width: 480px) {
 	header {
 		font-size: 2em;
-		padding-bottom: 10px;
+		padding: 10px 0;
 	}
 
 	.centerEverything {
@@ -151,6 +146,8 @@ ul li:has(a:hover) {
 	div#mainMain p {
 		max-width: 85%;
 		align-self: center;
+		padding: 10px;
+		border-radius: 40px;
 	}
 
 	nav {
@@ -177,7 +174,7 @@ ul li:has(a:hover) {
 		display: table-cell;
 		border-left: 5px solid rgb(230,211,255);
 		min-width: 33.3%;
-		padding: 10px 0;
+		padding: 5% 0;
 		vertical-align: middle;
 	}
 
@@ -190,6 +187,7 @@ ul li:has(a:hover) {
 		font-size: 1em;
 		display: flex;
 		flex-flow: column nowrap;
+		margin: 0;
 	}
 
 	footer {
