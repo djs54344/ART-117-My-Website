@@ -1,9 +1,14 @@
 @charset "UTF-8";
 
+@font-face {
+	font-family: "literallyTimes";
+	src: url("css/times.ttf") format("ttf");
+}
+
 /* general stuff */
 
 html {
-	font-family: "Times New Roman", Times, serif;
+	font-family: literallyTimes, "Times New Roman", Times, serif;
 	background-color: black;
 }
 
