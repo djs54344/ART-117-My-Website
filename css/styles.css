@@ -37,13 +37,6 @@ img.windows {
 	box-shadow: 0 0 5px rgb(11,7,31)
 }
 
-main {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	gap: 20px;
-	align-items: center;
-}
-
 main p {
 	border: 5px solid rgb(23,17,49);
 	border-radius: 60px;
@@ -51,29 +44,6 @@ main p {
 	text-align: center;
 	padding: 5px;
 	box-shadow: 0 0 5px rgb(23,17,49);
-}
-
-.centerEverything {
-	max-width: 80%;
-	margin: 0 auto;
-}
-
-nav ul {
-	list-style-type: none;
-	display: table;
-	border-collapse: collapse;
-	border: 5px solid rgb(230,211,255);
-	background-color: rgb(23,17,49);	
-	box-shadow: 0 0 5px rgb(230,211,255);
-}
-
-li {
-	font-size: 2em;
-	padding: 80px 10px;
-	vertical-align: center;
-	text-align: center;
-	overflow-wrap: normal;
-	border-top: 5px solid rgb(230,211,255);
 }
 
 li:nth-of-type(1) {
@@ -86,7 +56,7 @@ footer {
 	border-top: 5px solid rgb(230,211,255);
 	color: rgb(230,211,255);
 	background-color: rgb(9,6,23);
-	padding: 20px 10% 80px;
+	text-align: start;
 }
 
 /* link styles */
@@ -104,17 +74,136 @@ ul li:has(a:hover) {
 	background-color: rgb(9,10,59);
 }
 
-/* mobeel stuff */
+/* desktop stuff */
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) {
+	header {
+		padding-bottom: 60px;
+	}
+
+	img.windows {
+		height: 70%;
+		width: 70%;
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 20px;
+		align-items: center;
+		padding-bottom: 40px;
+	}
+
+	main p {
+		padding-top: 20px;
+	}
+
+	.centerEverything {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+
+	nav ul {
+		list-style-type: none;
+		display: table;
+		border-collapse: collapse;
+		border: 5px solid rgb(230,211,255);
+		background-color: rgb(23,17,49);	
+		box-shadow: 0 0 5px rgb(230,211,255);
+	}
+
 	nav {
-		display: flex;
-		width: max-content;
-		border-left: 0;
-		border-right: 0;
+		place-self: center;
 	}
 
 	li {
-		display: table-column;
+		font-size: 1.5em;
+		padding: 80px 15px;
+		text-align: center;
+		overflow-wrap: normal;
+		border-top: 5px solid rgb(230,211,255);
+	}
+	
+	footer {
+		padding: 20px 10% 80px 10%;
+	}
+}
+
+/* mobeel stuff */
+
+@media screen and (max-width: 480px) {
+	header {
+		font-size: 2em;
+		padding-bottom: 10px;
+	}
+
+	.centerEverything {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	main {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	div#mainMain p {
+		max-width: 85%;
+		align-self: center;
+	}
+
+	nav {
+		order: 99;
+	}
+
+	nav ul {
+		display: table;
+		border-left: 0;
+		border-right: 0;
+		flex-flow: row nowrap;
+		list-style-type: none;
+		border-collapse: collapse;
+		border-top: 5px solid rgb(230,211,255);
+		border-bottom: 5px solid rgb(230,211,255);
+		background-color: rgb(23,17,49);	
+		box-shadow: 0 0 5px rgb(230,211,255);
+		min-width: 100%;
+		text-align: center;
+	}
+
+	nav li {
+		font-size: 1.2em;
+		display: table-cell;
+		border-left: 5px solid rgb(230,211,255);
+		min-width: 33.3%;
+		padding: 10px 0;
+		vertical-align: middle;
+	}
+
+	nav li:nth-of-type(1) {
+		display: table-cell;
+		border-left: 0;
+	}
+
+	body {
+		font-size: 1em;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	footer {
+		order: 100;
+		padding: 20px 10px 20px 10px;
+		box-shadow: 0 0 5px rgb(230,211,255);
+
+	}
+
+	a:active {
+		text-shadow: 0 0 5px rgb(230,211,255);
+	}
+
+	ul li:has(a:active) {
+		background-color: rgb(9,10,59);
 	}
 }
