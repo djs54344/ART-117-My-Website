@@ -14,7 +14,7 @@ html {
 
 header {
 	font-size: 6.5vw;
-	text-shadow: 5px 0 rgb(23,17,49), -5px 0 rgb(23,17,49), 0 5px rgb(23,17,49), 0 -5px rgb(23,17,49);
+	text-shadow: 5px 0 rgb(23,17,49), -5px 0 rgb(23,17,49), 0 5px rgb(23,17,49), 0 -5px rgb(23,17,49), 0 8px 4px rgb(102,78,207);
 	text-align: center;
 }
 
@@ -69,14 +69,20 @@ footer {
 a {
 	text-decoration: none;
 	color: inherit;
+	text-shadow: 0 0 0 black;
+	transition: text-shadow .2s ease;
 }
 
 a:hover {
 	text-shadow: 0 0 5px rgb(230,211,255);
 }
 
-ul li:has(a:hover) {
+li:has(a:hover) {
 	background-color: rgb(9,10,59);
+}
+
+li {
+	transition: background-color .2s ease
 }
 
 /* desktop stuff */
