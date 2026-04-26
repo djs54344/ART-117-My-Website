@@ -47,6 +47,17 @@ img.windows {
 	align-self: center;
 }
 
+img.img-ols {
+	height: 80%;
+	width: 80%;
+}
+
+.right {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
 main p {
 	border: 5px solid rgb(23,17,49);
 	border-radius: 40px;
@@ -54,6 +65,21 @@ main p {
 	text-align: center;
 	padding: 5px;
 	box-shadow: 0 0 5px rgb(23,17,49);
+}
+
+button {
+	font-family: inherit;
+	font-size: 1.2rem;
+	border: 5px solid rgb(23,17,49);
+	border-radius: 60px;
+	background-image: linear-gradient(0deg, rgb(9,10,59), rgb(11,7,31));
+	text-align: center;
+	padding: 6px;
+	box-shadow: 0 0 5px rgb(23,17,49);
+	transition: background-color .2s ease, border-color .2s ease, text-shadow .2s ease;
+	color: inherit;
+	text-shadow: 0 0 0 black;
+	cursor: pointer;
 }
 
 li:nth-of-type(1) {
@@ -69,7 +95,7 @@ footer {
 	text-align: start;
 }
 
-/* link styles */
+/* link styles / Transition styles */
 
 a {
 	text-decoration: none;
@@ -90,10 +116,88 @@ li {
 	transition: background-color .2s ease
 }
 
+button:hover {
+	background-image: linear-gradient(0deg, rgb(19,20,89), rgb(21,17,61));
+	border-color: rgb(13,7,29);
+	text-shadow: 0 0 5px rgb(230,211,255);
+}
+
+/* form styles */
+
+form {
+	display: none;
+	position: fixed;
+	border: 5px solid rgb(23,17,49);
+	border-radius: 40px;
+	background-image: linear-gradient(0deg, rgb(9,10,59), rgb(11,7,31));
+	text-align: left;
+	padding: 20px;
+	box-shadow: 0 0 5px rgb(23,17,49);
+	font-size: 2rem;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	min-width: 80vw;
+	z-index: 11;
+}
+
+.form-input {
+	padding: 2vh 0;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+input,
+textarea {
+	font-size: 1rem;
+	font-family: inherit;
+	border: 5px solid rgb(23,17,49);
+	padding: 0;
+	color: rgb(9,6,23);
+	background-color: rgb(230,211,255); 
+}
+
+input:focus,
+textarea:focus {
+	outline: rgb(255,0,255) double 2px;
+}	
+
+input:user-valid,
+textarea:user-valid {
+	background-color: rgb(144, 255, 162);
+}
+
+input:user-invalid,
+textarea:user-invalid {
+	background-color: rgb(255, 144, 168);
+}	
+
+input[type="file"] {
+	border: none;
+	background-color: inherit;
+	color: inherit;
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	z-index: 10;
+}
+
+#img-upload-lsg {
+	padding: 10px 0 0 0;
+}
+
 /* desktop stuff */
 
 @media screen and (min-width: 481px) {
 	header {
+		-webkit-text-stroke: 2px rgb(23,17,49);
 		padding-bottom: 60px;
 	}
 
@@ -129,7 +233,7 @@ li {
 	}
 
 	li {
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 		padding: 80px 15px;
 		text-align: center;
 		overflow-wrap: normal;
@@ -162,6 +266,14 @@ li {
 		text-decoration: underline;
 	}
 
+	h3 {
+		font-size: 1.3rem;
+		color: rgba(230,211,255,.8);
+		margin: 0;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+	
 	header {
 		font-size: 2rem;
 		padding: 10px 0;
@@ -176,10 +288,66 @@ li {
 	.bottom-ols {
 		margin: 0 5%;
 	}
-
-	p.button {
-		border-radius: 60px;
+	
+	.lsg {
+		display: grid;
+		grid-template-columns: 50% 50%;
 	}
+	.nos {
+		max-width: 90%;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		margin: 0 auto;
+		gap: 5px;
+	}
+	
+	.lsg img {
+		width: 40vw;
+		height: auto;
+	}
+	
+	.left div,
+	.right div {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+	
+	.ols-button,
+	.nos-button {
+		margin-top: 20px;
+	}
+
+	div.button-div-nos {
+		display: flex;
+		flex-flow: column nowrap; 
+		align-items: center;
+	}
+	
+	.button-div {
+		display: flex;
+		flex-flow: row-reverse nowrap; 
+		max-width: 98vw
+	}
+	
+	.article {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+	
+	.article div {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: start;
+	}
+
+	.article img {
+		width: 45vw;
+		height: auto;
+		align-self: start;
+		justify-self: center;
+		margin-top: 50px;
+	}	
 
 	.centerEverything {
 		max-width: 100%;

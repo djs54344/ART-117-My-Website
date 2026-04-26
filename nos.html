@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Do You Remember This Place?</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    
+    <body>
+        <div class="centerEverything">
+            <header>
+                Do you remember this place?
+            </header>
+            <main>
+                <nav>
+                    <ul>
+                        <li><a href="why.html">Why?</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ols.html">Liminal Spaces</a></li>
+                    </ul>
+                </nav>
+                <h1>What is Nostalgia</h1>
+                <section class="nos">
+                    <div class="left">
+						<div>
+							<h2>How do you know when you're feeling nostalgic?</h2>
+							<p>
+							Lorem ipsum dolor sit amet consectetur adipiscing elit. Blandit quis suspendisse aliquet nisi sodales consequat magna. Sem placerat in id cursus mi pretium tellus. Finibus facilisis dapibus etiam interdum tortor ligula congue.
+						</div>
+					</div>
+
+                    <div class="right">
+						<div>
+							<h2>"Walking in a dark winter night"</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipiscing elit. Blandit quis suspendisse aliquet nisi sodales consequat magna. Sem placerat in id cursus mi pretium tellus. Finibus facilisis dapibus etiam interdum tortor ligula congue.
+							</p>
+						</div>
+						
+						<div>
+							<h2>"My experience in an empty subway"</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipiscing elit. Blandit quis suspendisse aliquet nisi sodales consequat magna. Sem placerat in id cursus mi pretium tellus. Finibus facilisis dapibus etiam interdum tortor ligula congue.
+							</p>
+						</div>
+                    </div>
+					
+					<div id="overlay" onclick="toggleForm()"></div>
+						
+				</section>
+					
+					<div class="button-div-nos">
+						<button onclick="toggleForm()" class="nos-button">Submit your own experiences!</button>
+					</div>
+					
+					<form id="form-nos">
+						<div class="form-input">
+							<label for="email-nos">Email</label>
+							<input type="email" id="email-nos" name="emailNos" placeholder="coolemail@somewhere.com" title="Enter your email here for our sceurity and any neccesary communication" required>
+						</div>
+							
+						<div class="form-input">
+							<label for="tel-nos">Phone Number</label>
+							<input type="tel" id="tel-nos" name="telNos" placeholder="123-456-7890" pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" title="Enter your phone number here for our security" required>
+						</div>
+						
+						<div class="form-input">
+							<label for="sub-nos">Subject</label>
+							<input type="text" id="sub-nos" name="subNos" title="Whats your experience about?" required>
+						</div>
+							
+						<div class="form-input">
+							<label for="exp-nos">Experience</label>
+							<textarea id="exp-nos" name="expNos" title="Describe your experience with nostalgia and/or liminal spaces!" required></textarea>
+						</div>
+							
+						<div class="form-input">
+							<button type="Submit">Submit!</button>
+						</div>
+					</form>
+            </main>
+        </div>
+		
+		<script>
+			function toggleForm() {
+			  const overlay = document.getElementById("overlay");
+			  const modal = document.getElementById("form-nos");
+
+			  const isOpen = overlay.style.display === "block";
+
+			  if (isOpen) {
+				overlay.style.display = "none";
+				modal.style.display = "none";
+			  } else {
+				overlay.style.display = "block";
+				modal.style.display = "block";
+			  }
+			}
+			
+			document.addEventListener("DOMContentLoaded", () => {
+			  const form = document.getElementById("myForm");
+
+			  form.addEventListener("submit", (e) => {
+				if (!form.checkValidity()) {
+				  e.preventDefault();
+				  alert("One of the input fields are rendering invalid!");
+				}
+			  });
+			});
+		</script>
+		
+        <footer>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id
+        </footer>
+    </body>
+</html>

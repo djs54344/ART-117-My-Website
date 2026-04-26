@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Do You Remember This Place?</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    
+    <body>
+        <div class="centerEverything">
+            <header>
+                Do you remember this place?
+            </header>
+            <main>
+                <nav>
+                    <ul>
+                        <li><a href="ols.html">On Liminal Spaces</a></li>
+                    </ul>
+                </nav>
+                <h1>On Liminal Spaces</h1>
+                <section class="lsg">
+                    <div class="left">
+						<div>
+							<p>
+							Lorem ipsum dolor sit amet consectetur adipiscing elit. Blandit quis suspendisse aliquet nisi sodales consequat magna. 
+							</p>
+							<img src="images/hallway.jpg" alt="a very dark pale hallway with dim blue lights lining the ceiling" class="img-ols">
+						</div>
+						
+						<div>
+							<p>
+							Lorem ipsum dolor sit amet consectetur adipiscing elit. Blandit quis suspendisse aliquet nisi sodales consequat magna. 
+							</p>
+							<img src="images/redlightwindows.jpg" alt="an image of large walls with various windows placed on a grid pattern while a red light shines towards the center" class="img-ols">
+						</div>
+                    </div>
+
+                    <div class="right">
+						<div>
+							<p>
+							Lorem ipsum dolor sit amet consectetur adipiscing elit. Blandit quis suspendisse aliquet nisi sodales consequat magna.
+							</p>
+							<img src="images/elevators.jpg" alt="an image of 2 elevators, side by side." class="img-ols">
+						</div>
+						
+						
+                    </div>
+					
+					<div id="overlay" onclick="toggleForm()"></div>
+						
+					</section>
+					
+					<div class="button-div">
+						<button onclick="toggleForm()" class="lsg-button">Submit your own images!</button>
+					</div>
+					
+					<form id="form-lsg">
+						<div class="form-input">
+							<label for="email-lsg">Email</label>
+							<input type="email" id="email-lsg" name="emailLsg" placeholder="coolemail@somewhere.com" title="Enter your email here for our sceurity and any neccesary communication" required>
+						</div>
+							
+						<div class="form-input">
+							<label for="tel-lsg">Phone Number</label>
+							<input type="tel" id="tel-lsg" name="telLsg" placeholder="123-456-7890" pattern="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" title="Enter your phone number here for our security" required>
+						</div>
+							
+						<div class="form-input">
+							<label for="caption-lsg">Caption</label>
+							<textarea id="caption-lsg" name="capLsg" title="Describe the image itself!" required></textarea>
+						</div>
+							
+						<div class="form-input">
+							<label for="img-upload-lsg">Image File</label>
+							<input type="file" id="img-upload-lsg" name="imgLsg" title="Upload your liminal space image!" accept="image/*" required>
+						</div>
+							
+						<div class="form-input">
+							<button type="Submit">Submit!</button>
+						</div>
+					</form>
+            </main>
+        </div>
+		
+		<script>
+			function toggleForm() {
+			  const overlay = document.getElementById("overlay");
+			  const modal = document.getElementById("form-lsg");
+
+			  const isOpen = overlay.style.display === "block";
+
+			  if (isOpen) {
+				overlay.style.display = "none";
+				modal.style.display = "none";
+			  } else {
+				overlay.style.display = "block";
+				modal.style.display = "block";
+			  }
+			}
+			
+			document.addEventListener("DOMContentLoaded", () => {
+			  const form = document.getElementById("myForm");
+
+			  form.addEventListener("submit", (e) => {
+				if (!form.checkValidity()) {
+				  e.preventDefault();
+				  alert("One of the input fields are rendering invalid!");
+				}
+			  });
+			});
+		</script>
+		
+        <footer>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id
+        </footer>
+    </body>
+</html>
