@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <title>Do You Remember This Place?</title>
+        <title>Do You Remember This Place? - Gallery</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
     
@@ -100,10 +100,8 @@
 			}
 			
 			document.addEventListener("DOMContentLoaded", () => {
-			  const form = document.getElementById("myForm");
-
 			  form.addEventListener("submit", (e) => {
-				if (!form.checkValidity()) {
+				if (!modal.checkValidity()) {
 				  e.preventDefault();
 				  alert("One of the input fields are rendering invalid!");
 				}

@@ -5,12 +5,13 @@
 	src: url("css/times.ttf") format("ttf");
 }
 
-/* general stuff */
+/* ------ general stuff ------ */
 
 html {
 	font-family: literallyTimes, "Times New Roman", Times, serif;
 	background-color: black;
 	font-size: 16px;
+	caret-color: transparent;
 }
 
 header {
@@ -25,9 +26,9 @@ body {
 	color: rgb(230,211,255);
 	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
 	background-image: url(../images/space_bg.png);
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 300vh 300vh;
 }
 
 #mainMain {
@@ -95,7 +96,7 @@ footer {
 	text-align: start;
 }
 
-/* link styles / Transition styles */
+/* ------ link styles / Transition styles ------ */
 
 a {
 	text-decoration: none;
@@ -122,7 +123,7 @@ button:hover {
 	text-shadow: 0 0 5px rgb(230,211,255);
 }
 
-/* form styles */
+/* ------ form styles ------ */
 
 form {
 	display: none;
@@ -133,11 +134,10 @@ form {
 	text-align: left;
 	padding: 20px;
 	box-shadow: 0 0 5px rgb(23,17,49);
-	font-size: 2rem;
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
-	min-width: 80vw;
+	
 	z-index: 11;
 }
 
@@ -193,9 +193,116 @@ input[type="file"] {
 	padding: 10px 0 0 0;
 }
 
-/* desktop stuff */
+/* ------ desktop stuff ------ */ 
 
 @media screen and (min-width: 481px) {
+	
+	h1 {
+		order: 0;
+		font-size: 4.5rem;
+		margin: 0;
+		-webkit-text-stroke: .02em rgb(102,78,207);
+		font-weight: normal;
+		text-decoration: underline;
+		text-align: center;
+		align-self: start;
+		grid-column: 2;
+		margin-bottom: 80px;
+	}
+	
+	h2 {
+		font-size: 3rem;
+		margin: 0;
+		-webkit-text-stroke: .02em rgb(23,17,49);
+		font-weight: normal;
+		text-decoration: underline;
+	}
+
+	h3 {
+		font-size: 2rem;
+		color: rgba(230,211,255,.8);
+		margin: 0;
+		font-weight: normal;
+		text-decoration: underline;
+	}
+	
+	.article {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column: 2;
+	}
+	
+	.article img {
+		margin-top: 50px;
+		width: 90%;
+		height: auto;
+		align-self: start;
+		max-width: 100%;
+	}
+	
+	.centerEverything {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	
+	.nos {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column: 2;	
+		gap: 100px;
+	}
+	
+	.form-input {
+		padding: 4vh 0;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	
+	.top-ols {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	
+	.ols-button {
+		margin-top: 20px;
+	}
+	
+	.lsg {
+		grid-column: 2;
+		column-count: 2;
+	}
+	
+	.lsg div {
+		text-align: center;
+	}
+	
+	div.button-div {
+		grid-column: 2;
+		display: flex;
+		justify-content: end;
+	}
+		
+	.lsg > div {
+		break-inside: avoid;
+		display: inline-block;
+		width: 100%;
+	}
+	
+	form {
+		width: 30vw;
+		height: 80vh;
+		font-size: 2rem;
+	}
+	
+	input {
+		font-size: 1.5rem;
+	}
+	
+	button {
+		font-size: 2rem;
+		padding: 20px 10px;
+	}
+	
 	header {
 		-webkit-text-stroke: 2px rgb(23,17,49);
 		padding-bottom: 60px;
@@ -213,12 +320,6 @@ input[type="file"] {
 		padding-top: 20px;
 	}
 
-	.centerEverything {
-		max-width: 80%;
-		margin: 0 auto;
-	}
-
-
 	nav ul {
 		list-style-type: none;
 		display: table;
@@ -229,7 +330,9 @@ input[type="file"] {
 	}
 
 	nav {
-		place-self: center;
+		position: sticky;
+		top: 10vh;
+		align-self: start;
 	}
 
 	li {
@@ -242,10 +345,11 @@ input[type="file"] {
 	
 	footer {
 		padding: 20px 10% 80px 10%;
+		font-size: 2rem;
 	}
 }
 
-/* mobeel stuff */
+/* ------ mobeel stuff ------ */
 
 @media screen and (max-width: 480px) {
 	h1 {
@@ -281,7 +385,7 @@ input[type="file"] {
 
 	.top-ols {
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 1fr 1fr;
 	}
 
 	.top-ols,
@@ -291,12 +395,13 @@ input[type="file"] {
 	
 	.lsg {
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 1fr 1fr;
 	}
+
 	.nos {
 		max-width: 90%;
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 1fr 1fr;
 		margin: 0 auto;
 		gap: 5px;
 	}
@@ -412,7 +517,12 @@ input[type="file"] {
 		box-shadow: 0 0 5px rgb(230,211,255);
 
 	}
-
+	
+	form {
+		min-width: 80vw;
+        font-size: 2rem;
+	}
+	
 	a:active {
 		text-shadow: 0 0 5px rgb(230,211,255);
 	}
