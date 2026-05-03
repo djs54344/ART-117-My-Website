@@ -162,13 +162,13 @@ textarea:focus {
 	outline: rgb(255,0,255) double 2px;
 }	
 
-input:user-valid,
-textarea:user-valid {
+input:valid,
+textarea:valid {
 	background-color: rgb(144, 255, 162);
 }
 
-input:user-invalid,
-textarea:user-invalid {
+input:invalid,
+textarea:invalid {
 	background-color: rgb(255, 144, 168);
 }	
 
@@ -468,7 +468,6 @@ input[type="file"] {
 		max-width: 85%;
 		align-self: center;
 		padding: 10px;
-		border-radius: e;
 	}
 
 	nav {
