@@ -137,7 +137,6 @@ form {
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
-	
 	z-index: 11;
 }
 
@@ -155,6 +154,11 @@ textarea {
 	padding: 0;
 	color: rgb(9,6,23);
 	background-color: rgb(230,211,255); 
+}
+
+textarea {
+	resize: none;
+	font-size: 2rem;
 }
 
 input:focus,
